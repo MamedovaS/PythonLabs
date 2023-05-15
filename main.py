@@ -1,10 +1,11 @@
-from Stadium import Stadium
+from Lab7.Stadium import Stadium
 
-stadiumList = [Stadium("LVIV", 2525, 60, "love", "pride"), Stadium("KYIV", 1212, 0, "asd", "qwe"),
-               Stadium("RIVNE", 4747, 580, "jkl", "uio")]
+stadium_list = [Stadium("LVIV", 2525, 60, "love", "pride"), Stadium("KYIV", 1212, 0, "asd", "qwe"),
+                Stadium(), Stadium.get_inctense()]
 
-for obj in stadiumList:
-    print(obj.name, obj.id, sep=" ")
+for stadium in stadium_list:
+    print(stadium.name, stadium.id, stadium.current_attendance, sep=" ")
 
+numbers_list = list(range(-100, 50))
 
-
+print(numbers_list[0::4])#кратність
