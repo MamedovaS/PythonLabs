@@ -34,7 +34,7 @@ class Stadium(SportComplex):
         overrided methode
         :return:None
         """
-        print("Football")
+        return "Football"
 
     @staticmethod
     def get_inctense():
