@@ -34,6 +34,20 @@ class SportComplexManager:
     def __iter__(self):
         return self
 
+    def find_any(self):
+        """
+        find any swimmingpool
+        :return:boolean
+        """
+        return any(True for sport_complex in self.sport_complex_list if sport_complex.name == "stadium")
+
+    def find_all(self):
+        """
+        find all stadiums
+        :return: boolean
+        """
+        return all(False for sport_comlex in self.sport_complex_list if isinstance(sport_comlex, Stadium))
+
     def add_sport_complex(self, sport_comlex):
         """
 

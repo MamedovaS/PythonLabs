@@ -18,10 +18,11 @@ class Swimmingpool(SportComplex):
         :param volume_of_pool: int
         :param max_participants: int
         """
-        self.name = name
-        self.amount_of_bathrooms = amount_of_bathrooms
-        self.volume_of_pool = volume_of_pool
-        self.max_participants = max_participants
+        self.name = "SwimmingPool"
+        self.amount_of_bathrooms = 20
+        self.volume_of_pool = 200
+        self.max_participants = 12
+        self.training_proposition = {"swimming", "holding breath"}
 
     def print_supported_sports(self):
         """
