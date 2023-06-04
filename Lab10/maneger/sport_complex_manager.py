@@ -1,9 +1,9 @@
 """
 module contain class SportComplexManager
 """
-from Lab8.modeles.sportcomplex import SportComplex
-from Lab8.modeles.stadium import Stadium
-from Lab8.modeles.swimmingpool import Swimmingpool
+from Lab10.modeles.sportcomplex import SportComplex
+from Lab10.modeles.stadium import Stadium
+from Lab10.modeles.swimmingpool import Swimmingpool
 
 
 class SportComplexManager:
@@ -40,6 +40,7 @@ class SportComplexManager:
         :return:boolean
         """
         return any(True for sport_complex in self.sport_complex_list if sport_complex.name == "stadium")
+
 
     def find_all(self):
         """
