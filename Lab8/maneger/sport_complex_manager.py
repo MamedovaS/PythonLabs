@@ -10,15 +10,43 @@ class SportComplexManager:
     """
     class that work with objects of daughter classes of SportComplex
     """
-    sport_complex_list: SportComplex = [Stadium("LVIV", 60, "love", "pride"),
-                                        Stadium("KYIV", 0,  "asd", "qwe"),
-                                        Stadium.get_inctense(), Swimmingpool()]
+    sport_complex_list = []
 
     def __init__(self, sport_complex_list):
         """
         :type sport_complex_list: SportComplex
         """
         self.sport_complex_list = sport_complex_list
+
+    def __getitem__(self, item):
+        """
+        :param item: int
+        :return: element by index
+        """
+        return self.sport_complex_list[item]
+
+    def __len__(self):
+        count_of_elem = 0
+        for sport_complex in self.sport_complex_list:
+            count_of_elem += 1
+        return count_of_elem
+
+    def __iter__(self):
+        return self
+
+    def find_any(self):
+        """
+        find any swimmingpool
+        :return:boolean
+        """
+        return any(True for sport_complex in self.sport_complex_list if sport_complex.name == "stadium")
+
+    def find_all(self):
+        """
+        find all stadiums
+        :return: boolean
+        """
+        return all(False for sport_comlex in self.sport_complex_list if isinstance(sport_comlex, Stadium))
 
     def add_sport_complex(self, sport_comlex):
         """
@@ -52,5 +80,5 @@ class SportComplexManager:
             if isinstance(sport_complex, Stadium):
                 if sport_complex.home_team == team_name or sport_complex.away_team == team_name:
                     stadium_where_ur_team_plays.append(sport_complex)
-        print(stadium_where_ur_team_plays)
+                    print(sport_complex)
         return stadium_where_ur_team_plays
