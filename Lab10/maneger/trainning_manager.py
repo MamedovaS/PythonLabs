@@ -1,4 +1,4 @@
-from Lab8.maneger.sport_complex_manager import SportComplexManager
+from Lab10.maneger.sport_complex_manager import SportComplexManager
 
 
 class TrainningManager:

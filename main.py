@@ -1,7 +1,7 @@
-from Lab8.maneger.trainning_manager import TrainningManager
-from Lab8.modeles.stadium import Stadium
-from Lab8.maneger.sport_complex_manager import SportComplexManager
-from Lab8.modeles.swimmingpool import Swimmingpool
+from Lab10.maneger.trainning_manager import TrainningManager
+from Lab10.modeles.stadium import Stadium
+from Lab10.maneger.sport_complex_manager import SportComplexManager
+from Lab10.modeles.swimmingpool import Swimmingpool
 
 manager = SportComplexManager([Stadium("LVIV", 60, "love", "pride"), Stadium("KYIV", 0, "asd", "qwe"),
                                Stadium.get_inctense(), Swimmingpool.get_inctense()])
@@ -15,16 +15,18 @@ list_of_counted_objects = []
 iter_for_obj = iter(manager.sport_complex_list)
 iter_for_set = iter(trainning_manager)
 
-print(next(iter_for_set))
+next(iter_for_obj).print_supported_sports()
+
+#print(next(iter_for_set))
 
 for sport_complex in manager.sport_complex_list:
     list_of_object_discretion.append(sport_complex.print_supported_sports())
 
 dict_for_lviv_stadium.update(manager.sport_complex_list[0].__dict__)
-print(dict_for_lviv_stadium)
+#print(dict_for_lviv_stadium)
 
 dict_for_stadium.update(manager.sport_complex_list[3].__dict__)
-print(dict_for_stadium)
+#print(dict_for_stadium)
 
 # print(list_of_object_discretion)
 

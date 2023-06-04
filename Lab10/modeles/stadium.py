@@ -1,7 +1,7 @@
 """
 module contain class Stadium
 """
-from Lab8.modeles.sportcomplex import SportComplex
+from Lab10.modeles.sportcomplex import SportComplex
 
 
 class Stadium(SportComplex):
