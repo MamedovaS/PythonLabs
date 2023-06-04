@@ -20,7 +20,7 @@ class SportComplex(ABC):
         self.current_attendance = current_attendance
         self.capacity = capacity
         self.free_sits = self.capacity - self.current_attendance
-        self.training_proposition = {}
+        self.training_proposition = set()
 
     @abstractmethod
     def print_supported_sports(self):

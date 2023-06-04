@@ -28,7 +28,7 @@ class Stadium(SportComplex):
         self.free_sits = self.capacity - self.current_attendance
         self.home_team = home_team
         self.away_team = away_team
-        self.training_proposition = {"running", "aimming"}
+        self.training_proposition = set("running")
 
     def print_supported_sports(self):
         """

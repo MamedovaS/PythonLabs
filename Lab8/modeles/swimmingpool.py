@@ -22,7 +22,7 @@ class Swimmingpool(SportComplex):
         self.amount_of_bathrooms = 20
         self.volume_of_pool = 200
         self.max_participants = 12
-        self.training_proposition = {"swimming", "holding breath"}
+        self.training_proposition = set("swimming")
 
     def print_supported_sports(self):
         """
